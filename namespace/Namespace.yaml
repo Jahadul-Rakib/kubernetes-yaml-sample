@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    companyId: cp1
+    role: cp1-role1
+    vpcId: cp1-vpc1
+  name: cp1
+spec:
+  finalizers:
+    - kubernetes

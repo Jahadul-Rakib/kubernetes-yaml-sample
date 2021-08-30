@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-main-app
+  labels:
+    app: kube-main-app
+  namespace: cp1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: kube-main-app
+      labels:
+        app: kube-main-app
+    spec:
+      containers:
+        - name: kube-main-app
+          image: jahadulrakib/kube-main-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MESSAGE
+              value: "Some"
+            - name: CHILD_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: CHILD_URL
+                  name: env-map-service
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: kube-main-app
