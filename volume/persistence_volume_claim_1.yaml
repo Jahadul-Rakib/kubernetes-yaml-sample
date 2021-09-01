@@ -10,6 +10,9 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: test-sc
-  selector:
-    matchLabels:
-      type: test-pv-selector
+  #volumeName: test-pv
+status:
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 1Gi

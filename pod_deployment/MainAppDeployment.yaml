@@ -27,7 +27,15 @@ spec:
                 configMapKeyRef:
                   key: CHILD_URL
                   name: env-map-service
+          volumeMounts:
+            - name: data
+              mountPath: /main-app
+
       restartPolicy: Always
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: test-pvc-two
   selector:
     matchLabels:
       app: kube-main-app

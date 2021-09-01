@@ -3,12 +3,10 @@ kind: PersistentVolume
 metadata:
   name: test-pv
   namespace: cp1
-  labels:
-    type: test-pv-selector
 spec:
   storageClassName: test-sc
   capacity:
-    storage: 2Gi
+    storage: 4Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete

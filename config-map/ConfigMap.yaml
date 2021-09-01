@@ -5,3 +5,4 @@ metadata:
   namespace: cp1
 data:
   CHILD_URL: child-app-service
+  MYSQL_PASSWORD: root
