@@ -42,6 +42,7 @@ spec:
     - metadata:
         name: mysql-vol
       spec:
+        volumeMode: Block
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
