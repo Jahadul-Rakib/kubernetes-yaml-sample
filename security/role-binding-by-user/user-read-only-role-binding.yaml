@@ -9,5 +9,5 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 subjects:
 – kind: User
-  name: rakib #The name of the user to give the role to
+  name: rakib-read #The name of the user to give the role to
   apiGroup: rbac.authorization.k8s.io

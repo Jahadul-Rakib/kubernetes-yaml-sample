@@ -9,5 +9,5 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 subjects:
   - kind: User
-    name: rakib
+    name: rakib-read-write
     apiGroup: rbac.authorization.k8s.io
