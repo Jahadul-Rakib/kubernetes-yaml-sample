@@ -14,10 +14,11 @@ spec:
       labels:
         app: mongodb
     spec:
+      serviceAccountName: dev-deployment-service-account
       terminationGracePeriodSeconds: 10
       containers:
         - name: mongodb
-          image: mongo:latest
+          image: mongo
           command:
             - "mongod"
             - "--bind_ip"
