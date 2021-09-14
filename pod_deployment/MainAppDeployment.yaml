@@ -13,6 +13,7 @@ spec:
       labels:
         app: kube-main-app
     spec:
+      serviceAccountName: dev-deployment-service-account
       containers:
         - name: kube-main-app
           image: jahadulrakib/kube-main-app:latest
