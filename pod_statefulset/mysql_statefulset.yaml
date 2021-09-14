@@ -34,7 +34,7 @@ spec:
           resources:
             requests:
               cpu: 500m
-              memory: 1Gi
+              memory: 256Gi
           volumeMounts:
             - name: mysql-vol
               mountPath: /var/lib/mysql

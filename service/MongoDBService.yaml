@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: cp1
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
+spec:
+  ports:
+    - port: 27017
+      name: mongodb
+      targetPort: 27017
+  clusterIP: None
+  selector:
+    app: mongodb

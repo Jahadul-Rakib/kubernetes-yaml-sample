@@ -6,3 +6,4 @@ metadata:
 data:
   CHILD_URL: child-app-service
   MYSQL_PASSWORD: root
+  MONGO_PASSWORD: root
