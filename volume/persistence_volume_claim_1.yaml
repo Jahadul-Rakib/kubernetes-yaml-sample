@@ -10,7 +10,6 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: test-sc
-  #volumeName: test-pv
 status:
   accessModes:
     - ReadWriteMany

@@ -4,6 +4,6 @@ metadata:
   name: test-sc
   namespace: cp1
 provisioner: docker.io/hostpath
-reclaimPolicy: Retain
+reclaimPolicy: Retain #Retain/Delete
 allowVolumeExpansion: true
-volumeBindingMode: Immediate
+volumeBindingMode: Immediate #Immediate/WaitForFirstConsumer

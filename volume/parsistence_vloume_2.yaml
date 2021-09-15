@@ -6,7 +6,7 @@ metadata:
 spec:
   storageClassName: test-sc
   capacity:
-    storage: 4Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete

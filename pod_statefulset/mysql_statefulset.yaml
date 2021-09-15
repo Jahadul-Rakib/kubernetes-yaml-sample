@@ -35,15 +35,15 @@ spec:
           resources:
             requests:
               cpu: 500m
-              memory: 256Gi
+              memory: 256Mi
           volumeMounts:
             - name: mysql-vol
-              mountPath: /var/lib/mysql
+              mountPath: /mysql
   volumeClaimTemplates:
     - metadata:
         name: mysql-vol
       spec:
-        volumeMode: Block
+        #volumeMode: Block #Block/Filesystem
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:

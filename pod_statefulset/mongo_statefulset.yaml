@@ -30,17 +30,17 @@ spec:
           resources:
             requests:
               cpu: 500m
-              memory: 256Gi
+              memory: 256Mi
           volumeMounts:
             - name: mongo-vol
-              mountPath: /var/lib/mongodb
+              mountPath: /mongodb
   volumeClaimTemplates:
     - metadata:
         name: mongo-vol
       spec:
-        volumeMode: Block
+        #volumeMode: Filesystem #Block/Filesystem
         accessModes: [ "ReadWriteOnce" ]
         resources:
           requests:
-            storage: 4Gi
+            storage: 1Gi
         storageClassName: test-sc
